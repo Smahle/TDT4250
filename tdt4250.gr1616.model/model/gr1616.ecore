@@ -36,8 +36,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="longtude" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="0.0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//GeoLocated"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//GeoLocated">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" unique="false" changeable="false"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weapon" unique="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="armor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spell scroll" unique="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeoLocated" abstract="true" interface="true">
     <eOperations name="getLatLong" unique="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shop" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dungeon" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="blacksmith" iD="true"/>
   </eClassifiers>
 </ecore:EPackage>
