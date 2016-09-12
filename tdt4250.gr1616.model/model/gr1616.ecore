@@ -5,7 +5,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Root"/>
   <eClassifiers xsi:type="ecore:EClass" name="Game">
     <eStructuralFeatures xsi:type="ecore:EReference" name="player" upperBound="-1"
-        eType="#//Player" containment="true"/>
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UoD">
     <eStructuralFeatures xsi:type="ecore:EReference" name="game" upperBound="-1" eType="#//Game"
@@ -19,16 +19,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ids" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Player" eSuperTypes="#//GeoLocation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="#//Person"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Inventory" upperBound="-1"
-        eType="#//Item"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nickname" unique="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xp" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeoLocation" eSuperTypes="#//GeoLocated">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" unique="false"
@@ -51,4 +41,39 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dungeon" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="blacksmith" iD="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Race" abstract="true" interface="true"
+      eSuperTypes="#//GeoLocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Inventory" upperBound="-1"
+        eType="#//Item"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nickname" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xp" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" eType="#//Race"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Troll" eSuperTypes="#//Race">
+    <eStructuralFeatures xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Human" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Elf" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Dark Elf" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Orc" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Nazgul" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Dwarf" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hobbit" eSuperTypes="#//Race"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Minion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hp" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attack" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Kine of Araw" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mumakil" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Great Eagle" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Great spider" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Wizzard" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Fell Beast" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ent" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Warg" eSuperTypes="#//Minion"/>
 </ecore:EPackage>
