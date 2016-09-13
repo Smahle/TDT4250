@@ -50,27 +50,25 @@
   <eClassifiers xsi:type="ecore:EEnum" name="Key"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Armor"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Potion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Instance">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shop" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dungeon" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="blacksmith" iD="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance" eSuperTypes="../../../no.hal.pgo.osm/model/osm.ecore#//GeoLocated">
+    <eStructuralFeatures xsi:type="ecore:EReference" eType="#//InstanceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Player" abstract="true" interface="true"
       eSuperTypes="../../../no.hal.pgo.osm/model/osm.ecore#//GeoLocation #//AbleToHold">
     <eOperations name="getRaceGoodAgainst" eType="#//Player"/>
     <eOperations name="getAffraidOf" eType="#//Minion"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="#//Person"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Inventory" upperBound="-1"
-        eType="#//Item"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nickname" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xp" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activeWeapon" eType="#//Weapon"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activeArmor" eType="#//Armor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dark Elf" eSuperTypes="#//Player"/>
   <eClassifiers xsi:type="ecore:EClass" name="Human" eSuperTypes="#//Player"/>
@@ -85,5 +83,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Wizzard" eSuperTypes="#//Minion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Ent" eSuperTypes="#//Minion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Warg" eSuperTypes="#//Minion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AbleToHold" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbleToHold" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inventory" upperBound="-1"
+        eType="#//Item"/>
+  </eClassifiers>
 </ecore:EPackage>
