@@ -11,6 +11,7 @@
         eType="#//Person" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="minions" upperBound="-1"
         eType="#//Minion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Locations" eType="#//Instance"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Game">
     <eOperations name="getNearby" eType="ecore:EClass ../../../no.hal.pgo.osm/model/osm.ecore#//GeoLocated">
