@@ -41,18 +41,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemType" eType="#//ItemType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemType" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Potion" eSuperTypes="#//ItemType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Armor" eSuperTypes="#//ItemType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Weapon" eSuperTypes="#//ItemType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Weapon.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PotionClass" eSuperTypes="#//ItemType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArmorClass" eSuperTypes="#//ItemType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WeaponClass" eSuperTypes="#//ItemType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Weapon"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Key" eSuperTypes="#//ItemType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KeyClass" eSuperTypes="#//ItemType"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Weapon"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Key"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Armor"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Potion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instance" eSuperTypes="../../../no.hal.pgo.osm/model/osm.ecore#//GeoLocated">
-    <eStructuralFeatures xsi:type="ecore:EReference" eType="#//InstanceType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceType" eType="#//InstanceType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InstanceType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -67,11 +67,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xp" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackPoints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activeWeapon" eType="#//Weapon"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activeArmor" eType="#//Armor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeWeapon" eType="#//WeaponClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeArmor" eType="#//ArmorClass"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dark Elf" eSuperTypes="#//Player"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DarkElf" eSuperTypes="#//Player"/>
   <eClassifiers xsi:type="ecore:EClass" name="Human" eSuperTypes="#//Player"/>
   <eClassifiers xsi:type="ecore:EClass" name="Orc" eSuperTypes="#//Player"/>
   <eClassifiers xsi:type="ecore:EClass" name="Dwarf" eSuperTypes="#//Player"/>
@@ -80,7 +80,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attack" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Great spider" eSuperTypes="#//Minion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GreatSpider" eSuperTypes="#//Minion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Wizzard" eSuperTypes="#//Minion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Ent" eSuperTypes="#//Minion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Warg" eSuperTypes="#//Minion"/>
