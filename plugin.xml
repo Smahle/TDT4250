@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated gr1616 -->
+      <package
+            uri="platform:/plugin/tdt4250.gr16nn.model/model/gr1616.ecore"
+            class="gr1616.Gr1616Package"
+            genModel="tdt4250.gr1616.model/model/gr1616.genmodel"/>
+   </extension>
+
+</plugin>
