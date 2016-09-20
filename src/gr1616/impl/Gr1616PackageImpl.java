@@ -5,14 +5,9 @@ package gr1616.impl;
 import gr1616.AbleToHold;
 import gr1616.Armor;
 import gr1616.ArmorClass;
-import gr1616.DarkElf;
-import gr1616.Dwarf;
-import gr1616.Ent;
 import gr1616.Game;
 import gr1616.Gr1616Factory;
 import gr1616.Gr1616Package;
-import gr1616.GreatSpider;
-import gr1616.Human;
 import gr1616.Instance;
 import gr1616.InstanceType;
 import gr1616.Item;
@@ -20,17 +15,15 @@ import gr1616.ItemType;
 import gr1616.Key;
 import gr1616.KeyClass;
 import gr1616.Minion;
-import gr1616.Orc;
+import gr1616.Minions;
 import gr1616.Person;
 import gr1616.Player;
 import gr1616.Potion;
 import gr1616.PotionClass;
+import gr1616.Race;
 import gr1616.Root;
-import gr1616.Warg;
 import gr1616.Weapon;
 import gr1616.WeaponClass;
-import gr1616.Wizzard;
-
 import no.hal.pgo.osm.OsmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -138,63 +131,7 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass darkElfEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass humanEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass orcEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dwarfEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass minionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass greatSpiderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass wizzardEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass wargEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,6 +167,20 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 * @generated
 	 */
 	private EEnum potionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum raceEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum minionsEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -633,6 +584,15 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPlayer_Race() {
+		return (EAttribute)playerEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getPlayer__GetRaceGoodAgainst() {
 		return playerEClass.getEOperations().get(0);
 	}
@@ -644,42 +604,6 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 */
 	public EOperation getPlayer__GetAffraidOf() {
 		return playerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDarkElf() {
-		return darkElfEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getHuman() {
-		return humanEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOrc() {
-		return orcEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDwarf() {
-		return dwarfEClass;
 	}
 
 	/**
@@ -714,35 +638,8 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGreatSpider() {
-		return greatSpiderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWizzard() {
-		return wizzardEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEnt() {
-		return entEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWarg() {
-		return wargEClass;
+	public EAttribute getMinion_Minion() {
+		return (EAttribute)minionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -797,6 +694,24 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 	 */
 	public EEnum getPotion() {
 		return potionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getRace() {
+		return raceEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMinions() {
+		return minionsEEnum;
 	}
 
 	/**
@@ -875,28 +790,14 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		createEReference(playerEClass, PLAYER__ACTIVE_WEAPON);
 		createEReference(playerEClass, PLAYER__ACTIVE_ARMOR);
 		createEAttribute(playerEClass, PLAYER__GOLD);
+		createEAttribute(playerEClass, PLAYER__RACE);
 		createEOperation(playerEClass, PLAYER___GET_RACE_GOOD_AGAINST);
 		createEOperation(playerEClass, PLAYER___GET_AFFRAID_OF);
-
-		darkElfEClass = createEClass(DARK_ELF);
-
-		humanEClass = createEClass(HUMAN);
-
-		orcEClass = createEClass(ORC);
-
-		dwarfEClass = createEClass(DWARF);
 
 		minionEClass = createEClass(MINION);
 		createEAttribute(minionEClass, MINION__HP);
 		createEAttribute(minionEClass, MINION__ATTACK);
-
-		greatSpiderEClass = createEClass(GREAT_SPIDER);
-
-		wizzardEClass = createEClass(WIZZARD);
-
-		entEClass = createEClass(ENT);
-
-		wargEClass = createEClass(WARG);
+		createEAttribute(minionEClass, MINION__MINION);
 
 		ableToHoldEClass = createEClass(ABLE_TO_HOLD);
 		createEReference(ableToHoldEClass, ABLE_TO_HOLD__INVENTORY);
@@ -906,6 +807,8 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		keyEEnum = createEEnum(KEY);
 		armorEEnum = createEEnum(ARMOR);
 		potionEEnum = createEEnum(POTION);
+		raceEEnum = createEEnum(RACE);
+		minionsEEnum = createEEnum(MINIONS);
 	}
 
 	/**
@@ -947,16 +850,8 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		instanceEClass.getESuperTypes().add(theOsmPackage.getGeoLocated());
 		playerEClass.getESuperTypes().add(theOsmPackage.getGeoLocation());
 		playerEClass.getESuperTypes().add(this.getAbleToHold());
-		darkElfEClass.getESuperTypes().add(this.getPlayer());
-		humanEClass.getESuperTypes().add(this.getPlayer());
-		orcEClass.getESuperTypes().add(this.getPlayer());
-		dwarfEClass.getESuperTypes().add(this.getPlayer());
 		minionEClass.getESuperTypes().add(theOsmPackage.getGeoLocation());
 		minionEClass.getESuperTypes().add(this.getAbleToHold());
-		greatSpiderEClass.getESuperTypes().add(this.getMinion());
-		wizzardEClass.getESuperTypes().add(this.getMinion());
-		entEClass.getESuperTypes().add(this.getMinion());
-		wargEClass.getESuperTypes().add(this.getMinion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rootEClass, Root.class, "Root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1009,7 +904,7 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		initEClass(instanceTypeEClass, InstanceType.class, "InstanceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInstanceType_Name(), ecorePackage.getEString(), "name", null, 0, 1, InstanceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(playerEClass, Player.class, "Player", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(playerEClass, Player.class, "Player", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlayer_Person(), this.getPerson(), null, "person", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Nickname(), ecorePackage.getEString(), "nickname", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Xp(), ecorePackage.getEInt(), "xp", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1017,30 +912,16 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		initEReference(getPlayer_ActiveWeapon(), this.getWeaponClass(), null, "activeWeapon", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlayer_ActiveArmor(), this.getArmorClass(), null, "activeArmor", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Gold(), ecorePackage.getEInt(), "gold", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlayer_Race(), this.getRace(), "race", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getPlayer__GetRaceGoodAgainst(), this.getPlayer(), "getRaceGoodAgainst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPlayer__GetRaceGoodAgainst(), this.getRace(), "getRaceGoodAgainst", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getPlayer__GetAffraidOf(), this.getMinion(), "getAffraidOf", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(darkElfEClass, DarkElf.class, "DarkElf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(humanEClass, Human.class, "Human", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(orcEClass, Orc.class, "Orc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(dwarfEClass, Dwarf.class, "Dwarf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEOperation(getPlayer__GetAffraidOf(), this.getMinions(), "getAffraidOf", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(minionEClass, Minion.class, "Minion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMinion_Hp(), ecorePackage.getEInt(), "hp", null, 0, 1, Minion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMinion_Attack(), ecorePackage.getEInt(), "attack", null, 0, 1, Minion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(greatSpiderEClass, GreatSpider.class, "GreatSpider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(wizzardEClass, Wizzard.class, "Wizzard", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(entEClass, Ent.class, "Ent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(wargEClass, Warg.class, "Warg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMinion_Minion(), this.getMinions(), "minion", null, 0, 1, Minion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ableToHoldEClass, AbleToHold.class, "AbleToHold", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbleToHold_Inventory(), this.getItem(), null, "inventory", null, 0, -1, AbleToHold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1053,6 +934,10 @@ public class Gr1616PackageImpl extends EPackageImpl implements Gr1616Package {
 		initEEnum(armorEEnum, Armor.class, "Armor");
 
 		initEEnum(potionEEnum, Potion.class, "Potion");
+
+		initEEnum(raceEEnum, Race.class, "Race");
+
+		initEEnum(minionsEEnum, Minions.class, "Minions");
 
 		// Create resource
 		createResource(eNS_URI);

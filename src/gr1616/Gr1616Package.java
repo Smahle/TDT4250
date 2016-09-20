@@ -549,10 +549,10 @@ public interface Gr1616Package extends EPackage {
 	int INSTANCE_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gr1616.Player <em>Player</em>}' class.
+	 * The meta object id for the '{@link gr1616.impl.PlayerImpl <em>Player</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see gr1616.Player
+	 * @see gr1616.impl.PlayerImpl
 	 * @see gr1616.impl.Gr1616PackageImpl#getPlayer()
 	 * @generated
 	 */
@@ -649,13 +649,22 @@ public interface Gr1616Package extends EPackage {
 	int PLAYER__GOLD = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Race</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__RACE = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Player</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER_FEATURE_COUNT = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 8;
+	int PLAYER_FEATURE_COUNT = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Lat Long</em>' operation.
@@ -694,586 +703,6 @@ public interface Gr1616Package extends EPackage {
 	int PLAYER_OPERATION_COUNT = OsmPackage.GEO_LOCATION_OPERATION_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link gr1616.impl.DarkElfImpl <em>Dark Elf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.DarkElfImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getDarkElf()
-	 * @generated
-	 */
-	int DARK_ELF = 12;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__LATITUDE = PLAYER__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__LONGITUDE = PLAYER__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__INVENTORY = PLAYER__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__PERSON = PLAYER__PERSON;
-
-	/**
-	 * The feature id for the '<em><b>Nickname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__NICKNAME = PLAYER__NICKNAME;
-
-	/**
-	 * The feature id for the '<em><b>Xp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__XP = PLAYER__XP;
-
-	/**
-	 * The feature id for the '<em><b>Attack Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__ATTACK_POINTS = PLAYER__ATTACK_POINTS;
-
-	/**
-	 * The feature id for the '<em><b>Active Weapon</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__ACTIVE_WEAPON = PLAYER__ACTIVE_WEAPON;
-
-	/**
-	 * The feature id for the '<em><b>Active Armor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__ACTIVE_ARMOR = PLAYER__ACTIVE_ARMOR;
-
-	/**
-	 * The feature id for the '<em><b>Gold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF__GOLD = PLAYER__GOLD;
-
-	/**
-	 * The number of structural features of the '<em>Dark Elf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF_FEATURE_COUNT = PLAYER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF___GET_LAT_LONG = PLAYER___GET_LAT_LONG;
-
-	/**
-	 * The operation id for the '<em>Get Race Good Against</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF___GET_RACE_GOOD_AGAINST = PLAYER___GET_RACE_GOOD_AGAINST;
-
-	/**
-	 * The operation id for the '<em>Get Affraid Of</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF___GET_AFFRAID_OF = PLAYER___GET_AFFRAID_OF;
-
-	/**
-	 * The number of operations of the '<em>Dark Elf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_ELF_OPERATION_COUNT = PLAYER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.HumanImpl <em>Human</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.HumanImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getHuman()
-	 * @generated
-	 */
-	int HUMAN = 13;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__LATITUDE = PLAYER__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__LONGITUDE = PLAYER__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__INVENTORY = PLAYER__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__PERSON = PLAYER__PERSON;
-
-	/**
-	 * The feature id for the '<em><b>Nickname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__NICKNAME = PLAYER__NICKNAME;
-
-	/**
-	 * The feature id for the '<em><b>Xp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__XP = PLAYER__XP;
-
-	/**
-	 * The feature id for the '<em><b>Attack Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__ATTACK_POINTS = PLAYER__ATTACK_POINTS;
-
-	/**
-	 * The feature id for the '<em><b>Active Weapon</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__ACTIVE_WEAPON = PLAYER__ACTIVE_WEAPON;
-
-	/**
-	 * The feature id for the '<em><b>Active Armor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__ACTIVE_ARMOR = PLAYER__ACTIVE_ARMOR;
-
-	/**
-	 * The feature id for the '<em><b>Gold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN__GOLD = PLAYER__GOLD;
-
-	/**
-	 * The number of structural features of the '<em>Human</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN_FEATURE_COUNT = PLAYER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN___GET_LAT_LONG = PLAYER___GET_LAT_LONG;
-
-	/**
-	 * The operation id for the '<em>Get Race Good Against</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN___GET_RACE_GOOD_AGAINST = PLAYER___GET_RACE_GOOD_AGAINST;
-
-	/**
-	 * The operation id for the '<em>Get Affraid Of</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN___GET_AFFRAID_OF = PLAYER___GET_AFFRAID_OF;
-
-	/**
-	 * The number of operations of the '<em>Human</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HUMAN_OPERATION_COUNT = PLAYER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.OrcImpl <em>Orc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.OrcImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getOrc()
-	 * @generated
-	 */
-	int ORC = 14;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__LATITUDE = PLAYER__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__LONGITUDE = PLAYER__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__INVENTORY = PLAYER__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__PERSON = PLAYER__PERSON;
-
-	/**
-	 * The feature id for the '<em><b>Nickname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__NICKNAME = PLAYER__NICKNAME;
-
-	/**
-	 * The feature id for the '<em><b>Xp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__XP = PLAYER__XP;
-
-	/**
-	 * The feature id for the '<em><b>Attack Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__ATTACK_POINTS = PLAYER__ATTACK_POINTS;
-
-	/**
-	 * The feature id for the '<em><b>Active Weapon</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__ACTIVE_WEAPON = PLAYER__ACTIVE_WEAPON;
-
-	/**
-	 * The feature id for the '<em><b>Active Armor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__ACTIVE_ARMOR = PLAYER__ACTIVE_ARMOR;
-
-	/**
-	 * The feature id for the '<em><b>Gold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC__GOLD = PLAYER__GOLD;
-
-	/**
-	 * The number of structural features of the '<em>Orc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC_FEATURE_COUNT = PLAYER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC___GET_LAT_LONG = PLAYER___GET_LAT_LONG;
-
-	/**
-	 * The operation id for the '<em>Get Race Good Against</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC___GET_RACE_GOOD_AGAINST = PLAYER___GET_RACE_GOOD_AGAINST;
-
-	/**
-	 * The operation id for the '<em>Get Affraid Of</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC___GET_AFFRAID_OF = PLAYER___GET_AFFRAID_OF;
-
-	/**
-	 * The number of operations of the '<em>Orc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORC_OPERATION_COUNT = PLAYER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.DwarfImpl <em>Dwarf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.DwarfImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getDwarf()
-	 * @generated
-	 */
-	int DWARF = 15;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__LATITUDE = PLAYER__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__LONGITUDE = PLAYER__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__INVENTORY = PLAYER__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__PERSON = PLAYER__PERSON;
-
-	/**
-	 * The feature id for the '<em><b>Nickname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__NICKNAME = PLAYER__NICKNAME;
-
-	/**
-	 * The feature id for the '<em><b>Xp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__XP = PLAYER__XP;
-
-	/**
-	 * The feature id for the '<em><b>Attack Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__ATTACK_POINTS = PLAYER__ATTACK_POINTS;
-
-	/**
-	 * The feature id for the '<em><b>Active Weapon</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__ACTIVE_WEAPON = PLAYER__ACTIVE_WEAPON;
-
-	/**
-	 * The feature id for the '<em><b>Active Armor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__ACTIVE_ARMOR = PLAYER__ACTIVE_ARMOR;
-
-	/**
-	 * The feature id for the '<em><b>Gold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF__GOLD = PLAYER__GOLD;
-
-	/**
-	 * The number of structural features of the '<em>Dwarf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF_FEATURE_COUNT = PLAYER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF___GET_LAT_LONG = PLAYER___GET_LAT_LONG;
-
-	/**
-	 * The operation id for the '<em>Get Race Good Against</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF___GET_RACE_GOOD_AGAINST = PLAYER___GET_RACE_GOOD_AGAINST;
-
-	/**
-	 * The operation id for the '<em>Get Affraid Of</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF___GET_AFFRAID_OF = PLAYER___GET_AFFRAID_OF;
-
-	/**
-	 * The number of operations of the '<em>Dwarf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DWARF_OPERATION_COUNT = PLAYER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link gr1616.impl.MinionImpl <em>Minion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1281,7 +710,7 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getMinion()
 	 * @generated
 	 */
-	int MINION = 16;
+	int MINION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
@@ -1329,13 +758,22 @@ public interface Gr1616Package extends EPackage {
 	int MINION__ATTACK = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Minion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINION__MINION = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Minion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MINION_FEATURE_COUNT = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 3;
+	int MINION_FEATURE_COUNT = OsmPackage.GEO_LOCATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Lat Long</em>' operation.
@@ -1356,334 +794,6 @@ public interface Gr1616Package extends EPackage {
 	int MINION_OPERATION_COUNT = OsmPackage.GEO_LOCATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link gr1616.impl.GreatSpiderImpl <em>Great Spider</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.GreatSpiderImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getGreatSpider()
-	 * @generated
-	 */
-	int GREAT_SPIDER = 17;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER__LATITUDE = MINION__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER__LONGITUDE = MINION__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER__INVENTORY = MINION__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Hp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER__HP = MINION__HP;
-
-	/**
-	 * The feature id for the '<em><b>Attack</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER__ATTACK = MINION__ATTACK;
-
-	/**
-	 * The number of structural features of the '<em>Great Spider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER_FEATURE_COUNT = MINION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER___GET_LAT_LONG = MINION___GET_LAT_LONG;
-
-	/**
-	 * The number of operations of the '<em>Great Spider</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GREAT_SPIDER_OPERATION_COUNT = MINION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.WizzardImpl <em>Wizzard</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.WizzardImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getWizzard()
-	 * @generated
-	 */
-	int WIZZARD = 18;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD__LATITUDE = MINION__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD__LONGITUDE = MINION__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD__INVENTORY = MINION__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Hp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD__HP = MINION__HP;
-
-	/**
-	 * The feature id for the '<em><b>Attack</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD__ATTACK = MINION__ATTACK;
-
-	/**
-	 * The number of structural features of the '<em>Wizzard</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD_FEATURE_COUNT = MINION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD___GET_LAT_LONG = MINION___GET_LAT_LONG;
-
-	/**
-	 * The number of operations of the '<em>Wizzard</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIZZARD_OPERATION_COUNT = MINION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.EntImpl <em>Ent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.EntImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getEnt()
-	 * @generated
-	 */
-	int ENT = 19;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT__LATITUDE = MINION__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT__LONGITUDE = MINION__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT__INVENTORY = MINION__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Hp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT__HP = MINION__HP;
-
-	/**
-	 * The feature id for the '<em><b>Attack</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT__ATTACK = MINION__ATTACK;
-
-	/**
-	 * The number of structural features of the '<em>Ent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT_FEATURE_COUNT = MINION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT___GET_LAT_LONG = MINION___GET_LAT_LONG;
-
-	/**
-	 * The number of operations of the '<em>Ent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENT_OPERATION_COUNT = MINION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gr1616.impl.WargImpl <em>Warg</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gr1616.impl.WargImpl
-	 * @see gr1616.impl.Gr1616PackageImpl#getWarg()
-	 * @generated
-	 */
-	int WARG = 20;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG__LATITUDE = MINION__LATITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG__LONGITUDE = MINION__LONGITUDE;
-
-	/**
-	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG__INVENTORY = MINION__INVENTORY;
-
-	/**
-	 * The feature id for the '<em><b>Hp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG__HP = MINION__HP;
-
-	/**
-	 * The feature id for the '<em><b>Attack</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG__ATTACK = MINION__ATTACK;
-
-	/**
-	 * The number of structural features of the '<em>Warg</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG_FEATURE_COUNT = MINION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Lat Long</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG___GET_LAT_LONG = MINION___GET_LAT_LONG;
-
-	/**
-	 * The number of operations of the '<em>Warg</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WARG_OPERATION_COUNT = MINION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link gr1616.AbleToHold <em>Able To Hold</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1691,7 +801,7 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getAbleToHold()
 	 * @generated
 	 */
-	int ABLE_TO_HOLD = 21;
+	int ABLE_TO_HOLD = 13;
 
 	/**
 	 * The feature id for the '<em><b>Inventory</b></em>' reference list.
@@ -1728,7 +838,7 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getWeapon()
 	 * @generated
 	 */
-	int WEAPON = 22;
+	int WEAPON = 14;
 
 	/**
 	 * The meta object id for the '{@link gr1616.Key <em>Key</em>}' enum.
@@ -1738,7 +848,7 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getKey()
 	 * @generated
 	 */
-	int KEY = 23;
+	int KEY = 15;
 
 	/**
 	 * The meta object id for the '{@link gr1616.Armor <em>Armor</em>}' enum.
@@ -1748,7 +858,7 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getArmor()
 	 * @generated
 	 */
-	int ARMOR = 24;
+	int ARMOR = 16;
 
 	/**
 	 * The meta object id for the '{@link gr1616.Potion <em>Potion</em>}' enum.
@@ -1758,7 +868,29 @@ public interface Gr1616Package extends EPackage {
 	 * @see gr1616.impl.Gr1616PackageImpl#getPotion()
 	 * @generated
 	 */
-	int POTION = 25;
+	int POTION = 17;
+
+
+	/**
+	 * The meta object id for the '{@link gr1616.Race <em>Race</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see gr1616.Race
+	 * @see gr1616.impl.Gr1616PackageImpl#getRace()
+	 * @generated
+	 */
+	int RACE = 18;
+
+
+	/**
+	 * The meta object id for the '{@link gr1616.Minions <em>Minions</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see gr1616.Minions
+	 * @see gr1616.impl.Gr1616PackageImpl#getMinions()
+	 * @generated
+	 */
+	int MINIONS = 19;
 
 
 	/**
@@ -2153,6 +1285,17 @@ public interface Gr1616Package extends EPackage {
 	EAttribute getPlayer_Gold();
 
 	/**
+	 * Returns the meta object for the attribute '{@link gr1616.Player#getRace <em>Race</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Race</em>'.
+	 * @see gr1616.Player#getRace()
+	 * @see #getPlayer()
+	 * @generated
+	 */
+	EAttribute getPlayer_Race();
+
+	/**
 	 * Returns the meta object for the '{@link gr1616.Player#getRaceGoodAgainst() <em>Get Race Good Against</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2171,46 +1314,6 @@ public interface Gr1616Package extends EPackage {
 	 * @generated
 	 */
 	EOperation getPlayer__GetAffraidOf();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.DarkElf <em>Dark Elf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dark Elf</em>'.
-	 * @see gr1616.DarkElf
-	 * @generated
-	 */
-	EClass getDarkElf();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Human <em>Human</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Human</em>'.
-	 * @see gr1616.Human
-	 * @generated
-	 */
-	EClass getHuman();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Orc <em>Orc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Orc</em>'.
-	 * @see gr1616.Orc
-	 * @generated
-	 */
-	EClass getOrc();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Dwarf <em>Dwarf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dwarf</em>'.
-	 * @see gr1616.Dwarf
-	 * @generated
-	 */
-	EClass getDwarf();
 
 	/**
 	 * Returns the meta object for class '{@link gr1616.Minion <em>Minion</em>}'.
@@ -2245,44 +1348,15 @@ public interface Gr1616Package extends EPackage {
 	EAttribute getMinion_Attack();
 
 	/**
-	 * Returns the meta object for class '{@link gr1616.GreatSpider <em>Great Spider</em>}'.
+	 * Returns the meta object for the attribute '{@link gr1616.Minion#getMinion <em>Minion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Great Spider</em>'.
-	 * @see gr1616.GreatSpider
+	 * @return the meta object for the attribute '<em>Minion</em>'.
+	 * @see gr1616.Minion#getMinion()
+	 * @see #getMinion()
 	 * @generated
 	 */
-	EClass getGreatSpider();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Wizzard <em>Wizzard</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wizzard</em>'.
-	 * @see gr1616.Wizzard
-	 * @generated
-	 */
-	EClass getWizzard();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Ent <em>Ent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ent</em>'.
-	 * @see gr1616.Ent
-	 * @generated
-	 */
-	EClass getEnt();
-
-	/**
-	 * Returns the meta object for class '{@link gr1616.Warg <em>Warg</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Warg</em>'.
-	 * @see gr1616.Warg
-	 * @generated
-	 */
-	EClass getWarg();
+	EAttribute getMinion_Minion();
 
 	/**
 	 * Returns the meta object for class '{@link gr1616.AbleToHold <em>Able To Hold</em>}'.
@@ -2344,6 +1418,26 @@ public interface Gr1616Package extends EPackage {
 	 * @generated
 	 */
 	EEnum getPotion();
+
+	/**
+	 * Returns the meta object for enum '{@link gr1616.Race <em>Race</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Race</em>'.
+	 * @see gr1616.Race
+	 * @generated
+	 */
+	EEnum getRace();
+
+	/**
+	 * Returns the meta object for enum '{@link gr1616.Minions <em>Minions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Minions</em>'.
+	 * @see gr1616.Minions
+	 * @generated
+	 */
+	EEnum getMinions();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2623,10 +1717,10 @@ public interface Gr1616Package extends EPackage {
 		EAttribute INSTANCE_TYPE__NAME = eINSTANCE.getInstanceType_Name();
 
 		/**
-		 * The meta object literal for the '{@link gr1616.Player <em>Player</em>}' class.
+		 * The meta object literal for the '{@link gr1616.impl.PlayerImpl <em>Player</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see gr1616.Player
+		 * @see gr1616.impl.PlayerImpl
 		 * @see gr1616.impl.Gr1616PackageImpl#getPlayer()
 		 * @generated
 		 */
@@ -2689,6 +1783,14 @@ public interface Gr1616Package extends EPackage {
 		EAttribute PLAYER__GOLD = eINSTANCE.getPlayer_Gold();
 
 		/**
+		 * The meta object literal for the '<em><b>Race</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLAYER__RACE = eINSTANCE.getPlayer_Race();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Race Good Against</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2703,46 +1805,6 @@ public interface Gr1616Package extends EPackage {
 		 * @generated
 		 */
 		EOperation PLAYER___GET_AFFRAID_OF = eINSTANCE.getPlayer__GetAffraidOf();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.DarkElfImpl <em>Dark Elf</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.DarkElfImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getDarkElf()
-		 * @generated
-		 */
-		EClass DARK_ELF = eINSTANCE.getDarkElf();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.HumanImpl <em>Human</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.HumanImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getHuman()
-		 * @generated
-		 */
-		EClass HUMAN = eINSTANCE.getHuman();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.OrcImpl <em>Orc</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.OrcImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getOrc()
-		 * @generated
-		 */
-		EClass ORC = eINSTANCE.getOrc();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.DwarfImpl <em>Dwarf</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.DwarfImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getDwarf()
-		 * @generated
-		 */
-		EClass DWARF = eINSTANCE.getDwarf();
 
 		/**
 		 * The meta object literal for the '{@link gr1616.impl.MinionImpl <em>Minion</em>}' class.
@@ -2771,44 +1833,12 @@ public interface Gr1616Package extends EPackage {
 		EAttribute MINION__ATTACK = eINSTANCE.getMinion_Attack();
 
 		/**
-		 * The meta object literal for the '{@link gr1616.impl.GreatSpiderImpl <em>Great Spider</em>}' class.
+		 * The meta object literal for the '<em><b>Minion</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.GreatSpiderImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getGreatSpider()
 		 * @generated
 		 */
-		EClass GREAT_SPIDER = eINSTANCE.getGreatSpider();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.WizzardImpl <em>Wizzard</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.WizzardImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getWizzard()
-		 * @generated
-		 */
-		EClass WIZZARD = eINSTANCE.getWizzard();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.EntImpl <em>Ent</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.EntImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getEnt()
-		 * @generated
-		 */
-		EClass ENT = eINSTANCE.getEnt();
-
-		/**
-		 * The meta object literal for the '{@link gr1616.impl.WargImpl <em>Warg</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see gr1616.impl.WargImpl
-		 * @see gr1616.impl.Gr1616PackageImpl#getWarg()
-		 * @generated
-		 */
-		EClass WARG = eINSTANCE.getWarg();
+		EAttribute MINION__MINION = eINSTANCE.getMinion_Minion();
 
 		/**
 		 * The meta object literal for the '{@link gr1616.AbleToHold <em>Able To Hold</em>}' class.
@@ -2867,6 +1897,26 @@ public interface Gr1616Package extends EPackage {
 		 * @generated
 		 */
 		EEnum POTION = eINSTANCE.getPotion();
+
+		/**
+		 * The meta object literal for the '{@link gr1616.Race <em>Race</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see gr1616.Race
+		 * @see gr1616.impl.Gr1616PackageImpl#getRace()
+		 * @generated
+		 */
+		EEnum RACE = eINSTANCE.getRace();
+
+		/**
+		 * The meta object literal for the '{@link gr1616.Minions <em>Minions</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see gr1616.Minions
+		 * @see gr1616.impl.Gr1616PackageImpl#getMinions()
+		 * @generated
+		 */
+		EEnum MINIONS = eINSTANCE.getMinions();
 
 	}
 

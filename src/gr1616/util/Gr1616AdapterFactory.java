@@ -119,40 +119,8 @@ public class Gr1616AdapterFactory extends AdapterFactoryImpl {
 				return createPlayerAdapter();
 			}
 			@Override
-			public Adapter caseDarkElf(DarkElf object) {
-				return createDarkElfAdapter();
-			}
-			@Override
-			public Adapter caseHuman(Human object) {
-				return createHumanAdapter();
-			}
-			@Override
-			public Adapter caseOrc(Orc object) {
-				return createOrcAdapter();
-			}
-			@Override
-			public Adapter caseDwarf(Dwarf object) {
-				return createDwarfAdapter();
-			}
-			@Override
 			public Adapter caseMinion(Minion object) {
 				return createMinionAdapter();
-			}
-			@Override
-			public Adapter caseGreatSpider(GreatSpider object) {
-				return createGreatSpiderAdapter();
-			}
-			@Override
-			public Adapter caseWizzard(Wizzard object) {
-				return createWizzardAdapter();
-			}
-			@Override
-			public Adapter caseEnt(Ent object) {
-				return createEntAdapter();
-			}
-			@Override
-			public Adapter caseWarg(Warg object) {
-				return createWargAdapter();
 			}
 			@Override
 			public Adapter caseAbleToHold(AbleToHold object) {
@@ -355,62 +323,6 @@ public class Gr1616AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.DarkElf <em>Dark Elf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.DarkElf
-	 * @generated
-	 */
-	public Adapter createDarkElfAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Human <em>Human</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Human
-	 * @generated
-	 */
-	public Adapter createHumanAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Orc <em>Orc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Orc
-	 * @generated
-	 */
-	public Adapter createOrcAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Dwarf <em>Dwarf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Dwarf
-	 * @generated
-	 */
-	public Adapter createDwarfAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gr1616.Minion <em>Minion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -421,62 +333,6 @@ public class Gr1616AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMinionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.GreatSpider <em>Great Spider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.GreatSpider
-	 * @generated
-	 */
-	public Adapter createGreatSpiderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Wizzard <em>Wizzard</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Wizzard
-	 * @generated
-	 */
-	public Adapter createWizzardAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Ent <em>Ent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Ent
-	 * @generated
-	 */
-	public Adapter createEntAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gr1616.Warg <em>Warg</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gr1616.Warg
-	 * @generated
-	 */
-	public Adapter createWargAdapter() {
 		return null;
 	}
 

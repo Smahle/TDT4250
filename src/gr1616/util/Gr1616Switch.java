@@ -150,92 +150,12 @@ public class Gr1616Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Gr1616Package.DARK_ELF: {
-				DarkElf darkElf = (DarkElf)theEObject;
-				T result = caseDarkElf(darkElf);
-				if (result == null) result = casePlayer(darkElf);
-				if (result == null) result = caseGeoLocation(darkElf);
-				if (result == null) result = caseAbleToHold(darkElf);
-				if (result == null) result = caseGeoLocated(darkElf);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.HUMAN: {
-				Human human = (Human)theEObject;
-				T result = caseHuman(human);
-				if (result == null) result = casePlayer(human);
-				if (result == null) result = caseGeoLocation(human);
-				if (result == null) result = caseAbleToHold(human);
-				if (result == null) result = caseGeoLocated(human);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.ORC: {
-				Orc orc = (Orc)theEObject;
-				T result = caseOrc(orc);
-				if (result == null) result = casePlayer(orc);
-				if (result == null) result = caseGeoLocation(orc);
-				if (result == null) result = caseAbleToHold(orc);
-				if (result == null) result = caseGeoLocated(orc);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.DWARF: {
-				Dwarf dwarf = (Dwarf)theEObject;
-				T result = caseDwarf(dwarf);
-				if (result == null) result = casePlayer(dwarf);
-				if (result == null) result = caseGeoLocation(dwarf);
-				if (result == null) result = caseAbleToHold(dwarf);
-				if (result == null) result = caseGeoLocated(dwarf);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Gr1616Package.MINION: {
 				Minion minion = (Minion)theEObject;
 				T result = caseMinion(minion);
 				if (result == null) result = caseGeoLocation(minion);
 				if (result == null) result = caseAbleToHold(minion);
 				if (result == null) result = caseGeoLocated(minion);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.GREAT_SPIDER: {
-				GreatSpider greatSpider = (GreatSpider)theEObject;
-				T result = caseGreatSpider(greatSpider);
-				if (result == null) result = caseMinion(greatSpider);
-				if (result == null) result = caseGeoLocation(greatSpider);
-				if (result == null) result = caseAbleToHold(greatSpider);
-				if (result == null) result = caseGeoLocated(greatSpider);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.WIZZARD: {
-				Wizzard wizzard = (Wizzard)theEObject;
-				T result = caseWizzard(wizzard);
-				if (result == null) result = caseMinion(wizzard);
-				if (result == null) result = caseGeoLocation(wizzard);
-				if (result == null) result = caseAbleToHold(wizzard);
-				if (result == null) result = caseGeoLocated(wizzard);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.ENT: {
-				Ent ent = (Ent)theEObject;
-				T result = caseEnt(ent);
-				if (result == null) result = caseMinion(ent);
-				if (result == null) result = caseGeoLocation(ent);
-				if (result == null) result = caseAbleToHold(ent);
-				if (result == null) result = caseGeoLocated(ent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Gr1616Package.WARG: {
-				Warg warg = (Warg)theEObject;
-				T result = caseWarg(warg);
-				if (result == null) result = caseMinion(warg);
-				if (result == null) result = caseGeoLocation(warg);
-				if (result == null) result = caseAbleToHold(warg);
-				if (result == null) result = caseGeoLocated(warg);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -430,66 +350,6 @@ public class Gr1616Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dark Elf</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dark Elf</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDarkElf(DarkElf object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Human</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Human</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseHuman(Human object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Orc</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Orc</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOrc(Orc object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dwarf</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dwarf</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDwarf(Dwarf object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Minion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -501,66 +361,6 @@ public class Gr1616Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMinion(Minion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Great Spider</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Great Spider</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGreatSpider(GreatSpider object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wizzard</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wizzard</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWizzard(Wizzard object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ent</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ent</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnt(Ent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Warg</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Warg</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWarg(Warg object) {
 		return null;
 	}
 

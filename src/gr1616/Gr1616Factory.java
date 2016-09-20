@@ -112,40 +112,13 @@ public interface Gr1616Factory extends EFactory {
 	InstanceType createInstanceType();
 
 	/**
-	 * Returns a new object of class '<em>Dark Elf</em>'.
+	 * Returns a new object of class '<em>Player</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dark Elf</em>'.
+	 * @return a new object of class '<em>Player</em>'.
 	 * @generated
 	 */
-	DarkElf createDarkElf();
-
-	/**
-	 * Returns a new object of class '<em>Human</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Human</em>'.
-	 * @generated
-	 */
-	Human createHuman();
-
-	/**
-	 * Returns a new object of class '<em>Orc</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Orc</em>'.
-	 * @generated
-	 */
-	Orc createOrc();
-
-	/**
-	 * Returns a new object of class '<em>Dwarf</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dwarf</em>'.
-	 * @generated
-	 */
-	Dwarf createDwarf();
+	Player createPlayer();
 
 	/**
 	 * Returns a new object of class '<em>Minion</em>'.
@@ -155,42 +128,6 @@ public interface Gr1616Factory extends EFactory {
 	 * @generated
 	 */
 	Minion createMinion();
-
-	/**
-	 * Returns a new object of class '<em>Great Spider</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Great Spider</em>'.
-	 * @generated
-	 */
-	GreatSpider createGreatSpider();
-
-	/**
-	 * Returns a new object of class '<em>Wizzard</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wizzard</em>'.
-	 * @generated
-	 */
-	Wizzard createWizzard();
-
-	/**
-	 * Returns a new object of class '<em>Ent</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ent</em>'.
-	 * @generated
-	 */
-	Ent createEnt();
-
-	/**
-	 * Returns a new object of class '<em>Warg</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Warg</em>'.
-	 * @generated
-	 */
-	Warg createWarg();
 
 	/**
 	 * Returns the package supported by this factory.

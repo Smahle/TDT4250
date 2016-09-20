@@ -20,10 +20,11 @@ import no.hal.pgo.osm.GeoLocation;
  *   <li>{@link gr1616.Player#getActiveWeapon <em>Active Weapon</em>}</li>
  *   <li>{@link gr1616.Player#getActiveArmor <em>Active Armor</em>}</li>
  *   <li>{@link gr1616.Player#getGold <em>Gold</em>}</li>
+ *   <li>{@link gr1616.Player#getRace <em>Race</em>}</li>
  * </ul>
  *
  * @see gr1616.Gr1616Package#getPlayer()
- * @model interface="true" abstract="true"
+ * @model
  * @generated
  */
 public interface Player extends GeoLocation, AbleToHold {
@@ -210,12 +211,33 @@ public interface Player extends GeoLocation, AbleToHold {
 	void setGold(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Race</b></em>' attribute.
+	 * The literals are from the enumeration {@link gr1616.Race}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Race</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @return the value of the '<em>Race</em>' attribute.
+	 * @see gr1616.Race
+	 * @see #setRace(Race)
+	 * @see gr1616.Gr1616Package#getPlayer_Race()
+	 * @model
 	 * @generated
 	 */
-	Player getRaceGoodAgainst();
+	Race getRace();
+
+	/**
+	 * Sets the value of the '{@link gr1616.Player#getRace <em>Race</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Race</em>' attribute.
+	 * @see gr1616.Race
+	 * @see #getRace()
+	 * @generated
+	 */
+	void setRace(Race value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,6 +245,14 @@ public interface Player extends GeoLocation, AbleToHold {
 	 * @model kind="operation"
 	 * @generated
 	 */
-	Minion getAffraidOf();
+	Race getRaceGoodAgainst();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Minions getAffraidOf();
 
 } // Player

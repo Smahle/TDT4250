@@ -11,6 +11,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gr1616.ecore#//Key"/>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gr1616.ecore#//Armor"/>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gr1616.ecore#//Potion"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gr1616.ecore#//Race"/>
     <genClasses ecoreClass="gr1616.ecore#//Root">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gr1616.ecore#//Root/game"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gr1616.ecore#//Root/item"/>
@@ -64,13 +65,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gr1616.ecore#//Player/activeWeapon"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gr1616.ecore#//Player/activeArmor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gr1616.ecore#//Player/gold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gr1616.ecore#//Player/race"/>
       <genOperations ecoreOperation="gr1616.ecore#//Player/getRaceGoodAgainst"/>
       <genOperations ecoreOperation="gr1616.ecore#//Player/getAffraidOf"/>
     </genClasses>
-    <genClasses ecoreClass="gr1616.ecore#//DarkElf"/>
-    <genClasses ecoreClass="gr1616.ecore#//Human"/>
-    <genClasses ecoreClass="gr1616.ecore#//Orc"/>
-    <genClasses ecoreClass="gr1616.ecore#//Dwarf"/>
     <genClasses ecoreClass="gr1616.ecore#//Minion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gr1616.ecore#//Minion/hp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gr1616.ecore#//Minion/attack"/>

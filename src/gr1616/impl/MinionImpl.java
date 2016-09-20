@@ -7,6 +7,7 @@ import gr1616.Gr1616Package;
 import gr1616.Item;
 import gr1616.Minion;
 
+import gr1616.Minions;
 import java.util.Collection;
 
 import no.hal.pgo.osm.impl.GeoLocationImpl;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link gr1616.impl.MinionImpl#getInventory <em>Inventory</em>}</li>
  *   <li>{@link gr1616.impl.MinionImpl#getHp <em>Hp</em>}</li>
  *   <li>{@link gr1616.impl.MinionImpl#getAttack <em>Attack</em>}</li>
+ *   <li>{@link gr1616.impl.MinionImpl#getMinion <em>Minion</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,26 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 	 * @ordered
 	 */
 	protected int attack = ATTACK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMinion() <em>Minion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Minions MINION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMinion() <em>Minion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinion()
+	 * @generated
+	 * @ordered
+	 */
+	protected Minions minion = MINION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,6 +187,27 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Minions getMinion() {
+		return minion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMinion(Minions newMinion) {
+		Minions oldMinion = minion;
+		minion = newMinion == null ? MINION_EDEFAULT : newMinion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Gr1616Package.MINION__MINION, oldMinion, minion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -174,6 +217,8 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 				return getHp();
 			case Gr1616Package.MINION__ATTACK:
 				return getAttack();
+			case Gr1616Package.MINION__MINION:
+				return getMinion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +242,9 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 			case Gr1616Package.MINION__ATTACK:
 				setAttack((Integer)newValue);
 				return;
+			case Gr1616Package.MINION__MINION:
+				setMinion((Minions)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -218,6 +266,9 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 			case Gr1616Package.MINION__ATTACK:
 				setAttack(ATTACK_EDEFAULT);
 				return;
+			case Gr1616Package.MINION__MINION:
+				setMinion(MINION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -236,6 +287,8 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 				return hp != HP_EDEFAULT;
 			case Gr1616Package.MINION__ATTACK:
 				return attack != ATTACK_EDEFAULT;
+			case Gr1616Package.MINION__MINION:
+				return minion != MINION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -286,6 +339,8 @@ public class MinionImpl extends GeoLocationImpl implements Minion {
 		result.append(hp);
 		result.append(", attack: ");
 		result.append(attack);
+		result.append(", minion: ");
+		result.append(minion);
 		result.append(')');
 		return result.toString();
 	}

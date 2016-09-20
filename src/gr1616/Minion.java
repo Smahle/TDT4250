@@ -15,6 +15,7 @@ import no.hal.pgo.osm.GeoLocation;
  * <ul>
  *   <li>{@link gr1616.Minion#getHp <em>Hp</em>}</li>
  *   <li>{@link gr1616.Minion#getAttack <em>Attack</em>}</li>
+ *   <li>{@link gr1616.Minion#getMinion <em>Minion</em>}</li>
  * </ul>
  *
  * @see gr1616.Gr1616Package#getMinion()
@@ -73,5 +74,34 @@ public interface Minion extends GeoLocation, AbleToHold {
 	 * @generated
 	 */
 	void setAttack(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Minion</b></em>' attribute.
+	 * The literals are from the enumeration {@link gr1616.Minions}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Minion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Minion</em>' attribute.
+	 * @see gr1616.Minions
+	 * @see #setMinion(Minions)
+	 * @see gr1616.Gr1616Package#getMinion_Minion()
+	 * @model
+	 * @generated
+	 */
+	Minions getMinion();
+
+	/**
+	 * Sets the value of the '{@link gr1616.Minion#getMinion <em>Minion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Minion</em>' attribute.
+	 * @see gr1616.Minions
+	 * @see #getMinion()
+	 * @generated
+	 */
+	void setMinion(Minions value);
 
 } // Minion

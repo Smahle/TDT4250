@@ -67,15 +67,8 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 			case Gr1616Package.KEY_CLASS: return createKeyClass();
 			case Gr1616Package.INSTANCE: return createInstance();
 			case Gr1616Package.INSTANCE_TYPE: return createInstanceType();
-			case Gr1616Package.DARK_ELF: return createDarkElf();
-			case Gr1616Package.HUMAN: return createHuman();
-			case Gr1616Package.ORC: return createOrc();
-			case Gr1616Package.DWARF: return createDwarf();
+			case Gr1616Package.PLAYER: return createPlayer();
 			case Gr1616Package.MINION: return createMinion();
-			case Gr1616Package.GREAT_SPIDER: return createGreatSpider();
-			case Gr1616Package.WIZZARD: return createWizzard();
-			case Gr1616Package.ENT: return createEnt();
-			case Gr1616Package.WARG: return createWarg();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +90,10 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 				return createArmorFromString(eDataType, initialValue);
 			case Gr1616Package.POTION:
 				return createPotionFromString(eDataType, initialValue);
+			case Gr1616Package.RACE:
+				return createRaceFromString(eDataType, initialValue);
+			case Gr1616Package.MINIONS:
+				return createMinionsFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,6 +115,10 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 				return convertArmorToString(eDataType, instanceValue);
 			case Gr1616Package.POTION:
 				return convertPotionToString(eDataType, instanceValue);
+			case Gr1616Package.RACE:
+				return convertRaceToString(eDataType, instanceValue);
+			case Gr1616Package.MINIONS:
+				return convertMinionsToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -228,39 +229,9 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DarkElf createDarkElf() {
-		DarkElfImpl darkElf = new DarkElfImpl();
-		return darkElf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Human createHuman() {
-		HumanImpl human = new HumanImpl();
-		return human;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Orc createOrc() {
-		OrcImpl orc = new OrcImpl();
-		return orc;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Dwarf createDwarf() {
-		DwarfImpl dwarf = new DwarfImpl();
-		return dwarf;
+	public Player createPlayer() {
+		PlayerImpl player = new PlayerImpl();
+		return player;
 	}
 
 	/**
@@ -271,46 +242,6 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 	public Minion createMinion() {
 		MinionImpl minion = new MinionImpl();
 		return minion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GreatSpider createGreatSpider() {
-		GreatSpiderImpl greatSpider = new GreatSpiderImpl();
-		return greatSpider;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Wizzard createWizzard() {
-		WizzardImpl wizzard = new WizzardImpl();
-		return wizzard;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Ent createEnt() {
-		EntImpl ent = new EntImpl();
-		return ent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Warg createWarg() {
-		WargImpl warg = new WargImpl();
-		return warg;
 	}
 
 	/**
@@ -390,6 +321,46 @@ public class Gr1616FactoryImpl extends EFactoryImpl implements Gr1616Factory {
 	 * @generated
 	 */
 	public String convertPotionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Race createRaceFromString(EDataType eDataType, String initialValue) {
+		Race result = Race.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRaceToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Minions createMinionsFromString(EDataType eDataType, String initialValue) {
+		Minions result = Minions.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMinionsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
